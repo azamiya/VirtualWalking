@@ -142,8 +142,19 @@ void ofApp::draw(){
 		
 		// Set the matrix to the perspective of this marker
 		// The origin is in the middle of the marker	
-		artk.applyModelMatrix(i);		
+		artk.applyModelMatrix(i);
+        
+        
+        // get the matrix 4x4 (includes translation and rotation)
+        //cout << artk.getMatrix(i) << endl;
 		
+        cout << "Quaternion -------" << endl
+        << artk.getOrientationQuaternion(i).asVec4() << endl
+        << "CameraPosition -------" << endl
+        << artk.getCameraPosition(i) << endl;
+        
+        
+        
 		// Draw a line from the center out
 		ofNoFill();
 		ofSetLineWidth(5);

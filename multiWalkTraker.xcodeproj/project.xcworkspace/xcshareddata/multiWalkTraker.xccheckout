@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0B4817C2-681A-45E0-BC0D-B28A7E9359C3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>multiWalkTraker</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CB707471-C905-4080-90AC-BAF8295B7F07</key>
+		<string>ssh://r18/r18/multiWalkTraker.git</string>
+		<key>CE411BD3-0246-466D-8AC1-C846D725CB0F</key>
+		<string>https://github.com/fishkingsin/ofxARtoolkitPlus</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>multiWalkTraker.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CB707471-C905-4080-90AC-BAF8295B7F07</key>
+		<string>../..</string>
+		<key>CE411BD3-0246-466D-8AC1-C846D725CB0F</key>
+		<string>../../../../../addons/ofxARtoolkitPlus</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://r18/r18/multiWalkTraker.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CB707471-C905-4080-90AC-BAF8295B7F07</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CB707471-C905-4080-90AC-BAF8295B7F07</string>
+			<key>IDESourceControlWCCName</key>
+			<string>multiWalkTraker</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CE411BD3-0246-466D-8AC1-C846D725CB0F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ofxARtoolkitPlus</string>
+		</dict>
+	</array>
+</dict>
+</plist>
