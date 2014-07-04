@@ -47,6 +47,8 @@ void ofApp::setup(){
 	artk.setThreshold(threshold);
 
 	ofBackground(127,127,127);
+    // open an outgoing connection to HOST:PORT
+	sender.setup(HOST, PORT);
 	
 }
 
@@ -96,7 +98,8 @@ void ofApp::draw(){
 	ofSetHexColor(0x666666);	
 	ofDrawBitmapString("Threshold: " + ofToString(threshold), 650, 20);
 	ofDrawBitmapString("Use the Up/Down keys to adjust the threshold", 650, 40);
-
+	ofDrawBitmapString("press A to send osc message [/test 1.0 1.0 1.0 hello adaniya <time>]", 650, 60);
+    
 	// ARTK draw
 	// An easy was to see what is going on
 	// Draws the marker location and id number
@@ -189,6 +192,17 @@ void ofApp::keyPressed(int key){
 		vidGrabber.videoSettings();
 	}
 	#endif
+    if(key == 'a' || key == 'A'){
+		ofxOscMessage m;
+		m.setAddress("/test");
+		//m.addIntArg(1);
+		m.addFloatArg(1.0);
+        m.addFloatArg(1.0);
+		m.addFloatArg(1.0);
+		m.addStringArg("hello adaniya!");
+		m.addFloatArg(ofGetElapsedTimef());
+		sender.sendMessage(m);
+	}
 }
 
 //--------------------------------------------------------------
