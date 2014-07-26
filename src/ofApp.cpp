@@ -155,15 +155,15 @@ void ofApp::draw(){
         << artk.getOrientationQuaternion(i).asVec4() << endl
         << "CameraPosition -------" << endl
         << artk.getCameraPosition(i) << endl
-        << "x:" + ofToString(i) << endl;
+        << "x:" + ofToString(artk.getCameraPosition(i).x) << endl;
         
         //Send CameraPosition to Unity
         ofxOscMessage xyz;
 		xyz.setAddress("/test");
 		//m.addIntArg(1);
-		xyz.addFloatArg(1.0f);
-        xyz.addFloatArg(1.0f);
-		xyz.addFloatArg(1.0f);
+		xyz.addFloatArg(artk.getCameraPosition(i).x);
+        xyz.addFloatArg(artk.getCameraPosition(i).y);
+		xyz.addFloatArg(artk.getCameraPosition(i).z);
 		xyz.addStringArg("hello adaniya!");
 		xyz.addFloatArg(ofGetElapsedTimef());
 		sender.sendMessage(xyz);
