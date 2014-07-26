@@ -154,8 +154,19 @@ void ofApp::draw(){
         cout << "Quaternion -------" << endl
         << artk.getOrientationQuaternion(i).asVec4() << endl
         << "CameraPosition -------" << endl
-        << artk.getCameraPosition(i) << endl;
+        << artk.getCameraPosition(i) << endl
+        << "x:" + ofToString(i) << endl;
         
+        //Send CameraPosition to Unity
+        ofxOscMessage xyz;
+		xyz.setAddress("/test");
+		//m.addIntArg(1);
+		xyz.addFloatArg(1.0f);
+        xyz.addFloatArg(1.0f);
+		xyz.addFloatArg(1.0f);
+		xyz.addStringArg("hello adaniya!");
+		xyz.addFloatArg(ofGetElapsedTimef());
+		sender.sendMessage(xyz);
         
         
 		// Draw a line from the center out
@@ -196,9 +207,9 @@ void ofApp::keyPressed(int key){
 		ofxOscMessage m;
 		m.setAddress("/test");
 		//m.addIntArg(1);
-		m.addFloatArg(1.0);
-        m.addFloatArg(1.0);
-		m.addFloatArg(1.0);
+		m.addFloatArg(1.0f);
+        m.addFloatArg(1.0f);
+		m.addFloatArg(1.0f);
 		m.addStringArg("hello adaniya!");
 		m.addFloatArg(ofGetElapsedTimef());
 		sender.sendMessage(m);
